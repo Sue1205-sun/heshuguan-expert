@@ -1,0 +1,53 @@
+{
+  "name": "heshuguan",
+  "version": "1.0.0",
+  "description": "A verification-first financial analyst that cross-checks every figure against a second source, runs accounting reconciliation, and flags what it cannot confirm.",
+  "author": {
+    "name": "heshuguan",
+    "email": "heshuguan@example.com"
+  },
+  "agents": ["./agents/heshuguan.md"],
+  "skills": ["./skills/heshuguan-verify"],
+
+  "expertType": "agent",
+  "agentName": "heshuguan",
+
+  "displayName": {
+    "en": "HeshuGuan",
+    "zh": "核数官"
+  },
+  "profession": {
+    "en": "Financial Statement Verification Analyst",
+    "zh": "金融财报核验师"
+  },
+  "displayDescription": {
+    "en": "Cross-checks every figure in annual reports and credit materials against a second source, runs reconciliation and fraud red-flag screening, cites where each number comes from, and says plainly what it cannot verify.",
+    "zh": "核对财报与授信材料的每个数字，做双源交叉验证、勾稽检查与欺诈红旗识别，结论标注出处，不确定就明说。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "08-FinanceInvestment",
+  "defaultInitPrompt": {
+    "zh": "这是伊利股份2024年年度报告，请出一份财报速读报告。",
+    "en": "This is the 2024 annual report of Yili. Please produce a one-page financial quick-read report."
+  },
+  "plugin": "heshuguan",
+  "tags": [
+    { "en": "Statement Verification", "zh": "财报核验" },
+    { "en": "Fraud Risk Screening", "zh": "风控反欺诈" },
+    { "en": "Compliance Review", "zh": "合规审查" }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "这是伊利股份2024年年度报告，请出一份财报速读报告。",
+      "en": "This is the 2024 annual report of Yili. Please produce a one-page financial quick-read report."
+    },
+    {
+      "zh": "这是一份企业授信申请材料，帮我核验财务数据一致性，列出欺诈红旗，输出风险评分卡。",
+      "en": "This is a corporate credit application package. Verify the consistency of its financial data, list fraud red flags, and output a risk scorecard."
+    },
+    {
+      "zh": "我们银行网点向老年客户推销理财产品，销售话术是保本保息、稳赚不赔，帮我核验这话术是否合规，并给出合规替代话术。",
+      "en": "Our bank branch sells wealth products to elderly clients with the pitch 'principal guaranteed, steady profit, never loses'. Check whether this is compliant and provide a compliant alternative."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "heshuguan-expert",
+  "description": "核数官 —— 财报与授信材料核验专家。核对每个数字的双源一致性，做勾稽检查与欺诈红旗识别，结论标注出处，查不了的明说查不了。",
+  "owner": {
+    "name": "heshuguan",
+    "email": "heshuguan@example.com"
+  },
+  "metadata": {
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "heshuguan",
+      "description": "A verification-first financial analyst that cross-checks every figure against a second source, runs accounting reconciliation, and flags what it cannot confirm.",
+      "source": "./plugins/heshuguan",
+      "category": "08-FinanceInvestment",
+      "version": "1.0.0"
+    }
+  ]
+}

@@ -2,17 +2,21 @@
 
 一个核验优先的金融分析专家：每个数字都要找到第二个来源，找不到就标"存疑"；勾稽关系逐条检查，材料缺科目就写"未执行"，不当成通过。
 
-## 评委安装（三步，约 1 分钟）
+## 安装（双击即可，Windows）
 
-1. 打开 WorkBuddy，在**任意对话的输入框输入 `/plugins`**，打开插件管理
-2. 点 **添加市场**，在"市场源"里填：
-   ```
-   Sue1205-sun/heshuguan-expert
-   ```
-   点提交
-3. 在列表中找到 **核数官**，点 **安装**，再点 **启用**
+压缩包里有一个 `05-安装专家包` 目录，双击里面的 **`安装核数官.bat`**，脚本会把专家复制到
 
-装好后左侧 **专家 → 我的专家** 里出现「核数官」，点进去即可对话。
+```
+%USERPROFILE%\.workbuddy\plugins\marketplaces\my-experts\plugins\heshuguan
+```
+
+并把条目写进同级的 `marketplace.json`（不会覆盖你已有的专家）。**装完重启 WorkBuddy**，左侧「专家 → 我的专家」里就会出现「核数官」。
+
+macOS 手动装：把 `plugins/heshuguan` 整个文件夹复制到 `~/.workbuddy/plugins/marketplaces/my-experts/plugins/`，再在 `~/.workbuddy/plugins/marketplaces/my-experts/.codebuddy-plugin/marketplace.json` 的 `plugins` 数组里加一条：
+
+```json
+{"name":"heshuguan","source":"./plugins/heshuguan","version":"1.0.0"}
+```
 
 ## 三种模式（直接打字，自动识别，不需要切换）
 
@@ -44,9 +48,7 @@
 
 ## 确定性引擎
 
-`plugins/heshuguan/skills/heshuguan-verify/scripts/` 下是纯标准库实现，不依赖任何第三方包：
-
-在 `plugins/heshuguan/skills/heshuguan-verify/scripts/` 目录下执行：
+`plugins/heshuguan/skills/heshuguan-verify/scripts/` 下是纯标准库实现，不依赖任何第三方包。在该目录执行：
 
 ```
 python -m heshuguan check data/huachen.json
